@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    :root {
+      --gold: #fcd535; --bg: #0b0e11; --card: #1e2329; --gray: #848e9c;
+    }
+    body { 
+      width: 320px; background: var(--bg); color: #fff; font-family: 'Segoe UI', sans-serif; 
+      padding: 0; margin: 0; border: 1px solid #333; overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(180deg, #2b3139 0%, var(--bg) 100%);
+      padding: 20px; text-align: center; border-bottom: 2px solid var(--gold);
+    }
+    .header h1 { 
+      margin: 0; font-size: 22px; color: var(--gold); text-shadow: 0 0 10px rgba(252, 213, 53, 0.3);
+      letter-spacing: 2px;
+    }
+    .content { padding: 20px; }
+    .status-box {
+      background: var(--card); border-radius: 10px; padding: 12px; 
+      margin-bottom: 20px; border-left: 4px solid var(--gold);
+    }
+    .label { font-size: 10px; color: var(--gray); text-transform: uppercase; margin-bottom: 5px; display: block; }
+    #displayId { color: #02c076; font-family: monospace; font-weight: bold; font-size: 14px; }
+    
+    .input-row { display: flex; gap: 10px; margin-bottom: 20px; }
+    .input-field { flex: 1; }
+    input {
+      width: 100%; background: #2b3139; border: 1px solid #474d57; border-radius: 6px;
+      padding: 10px; color: #fff; font-weight: bold; outline: none; transition: 0.3s;
+    }
+    input:focus { border-color: var(--gold); box-shadow: 0 0 5px rgba(252, 213, 53, 0.2); }
+
+    #runSniper {
+      width: 100%; padding: 15px; border: none; border-radius: 8px;
+      background: linear-gradient(90deg, #fcd535, #efb90b);
+      color: #000; font-weight: 800; font-size: 16px; cursor: pointer;
+      text-transform: uppercase; transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(252, 213, 53, 0.2);
+    }
+    #runSniper:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(252, 213, 53, 0.4); }
+    #runSniper:active { transform: translateY(0); }
+    #runSniper:disabled { background: #474d57; color: #848e9c; cursor: not-allowed; transform: none; }
+
+    .footer {
+      background: #181a20; padding: 15px; text-align: center; font-size: 12px;
+    }
+    .dev-name { color: var(--gold); font-weight: bold; margin-bottom: 10px; display: block; }
+    .tg-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #0088cc; color: #fff; text-decoration: none;
+      padding: 8px 15px; border-radius: 50px; font-weight: bold; transition: 0.3s;
+    }
+    .tg-btn:hover { background: #00aaff; box-shadow: 0 0 10px rgba(0, 136, 204, 0.5); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>BSMART SNIPER</h1>
+  </div>
+
+  <div class="content">
+    <div class="status-box">
+      <span class="label">LIVE REQUEST ID:</span>
+      <span id="displayId">WAINTING...</span>
+    </div>
+
+    <div class="input-row">
+      <div class="input-field">
+        <span class="label">DELAY (S)</span>
+        <input type="number" id="delayInput" value="1">
+      </div>
+      <div class="input-field">
+        <span class="label">SPINS</span>
+        <input type="number" id="spinsInput" value="1">
+      </div>
+    </div>
+
+    <button id="runSniper" disabled>START SNIPER 🚀</button>
+  </div>
+
+  <div class="footer">
+    <span class="dev-name">BY YASSER EID</span>
+    <a href="https://t.me/yyeir" target="_blank" class="tg-btn">
+       CONTACT TELEGRAM
+    </a>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

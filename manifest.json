@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Binance Sniper Pro",
+  "version": "1.2",
+  "permissions": ["webRequest", "storage", "scripting", "activeTab"],
+  "host_permissions": ["*://*.binance.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
